@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  constructor() { }
+  public image:string ='https://icones.pro/wp-content/uploads/2022/07/icone-angulaire-jaune.png';
+  constructor() {}
+
   ngOnInit(): void {
-  }
-  alert():void{
-    let texto = document.getElementById('div')
   }
 }
