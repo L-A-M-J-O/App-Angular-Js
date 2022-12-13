@@ -5,16 +5,19 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { CardComponent } from './shared/components/card/card.component';
 import { ItemsComponent } from './shared/components/items/items.component';
+import { ListasModule } from './modules/listas/listas.module';
+import { ListasBasicasComponent } from './modules/listas/listas-basicas/listas-basicas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CardComponent,
-    ItemsComponent
+    ItemsComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ListasModule
   ],
   providers: [],
   bootstrap: [AppComponent]
