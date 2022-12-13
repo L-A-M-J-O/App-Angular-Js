@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListasBasicasComponent implements OnInit {
 
+  listaDeElementos:string[] = ['Leche', 'Ternera', 'Verdura', 'Huevos'];
+
+  cargando:boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+
+  }
+
+  cambiarCargando () {
+    this.cargando = !this.cargando;
   }
 
 }

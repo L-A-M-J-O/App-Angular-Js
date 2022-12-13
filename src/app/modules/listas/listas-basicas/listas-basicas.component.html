@@ -4,3 +4,9 @@
 <h3 [ngClass]="['underlined','small']">Hola Mundo</h3>
 <h3 [ngClass]="{underlined:false, small:true}">Hola Mundo</h3>
 
+<h4 *ngIf="cargando">
+  Cargando...
+</h4>
+
+
+<button (click)="cambiarCargando()">Cambiar</button>
