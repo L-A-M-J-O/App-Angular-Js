@@ -7,6 +7,27 @@
 <h4 *ngIf="cargando">
   Cargando...
 </h4>
-
-
 <button (click)="cambiarCargando()">Cambiar</button>
+
+<div *ngFor="let producto of listaDeElementos">
+  <h3>{{producto.name}}</h3>
+  <span>{{producto.price}}</span>
+  <p>{{producto.description}}</p>
+</div>
+
+<div [ngSwitch]="opcion">
+  <p [id]='1' *ngSwitchCase='1'>Has escogido la Opcion 1</p>
+  <p [id]='2' *ngSwitchCase='2'>Has escogido la Opcion 2</p>
+  <p [id]='3' *ngSwitchCase='3'>Has escogido la Opcion 3</p>
+  <p [id]='4' *ngSwitchCase='4'>Has escogido la Opcion 4</p>
+  <p *ngSwitchDefault class="cerrar">No has escogido ninguna opcion a un</p>
+</div>
+<div>
+  <input type="radio" name="opcion" (click)="escogerOpcion(1)"/> Opcion 1
+  <input type="radio" name="opcion" (click)="escogerOpcion(2)"/> Opcion 2
+  <input type="radio" name="opcion" (click)="escogerOpcion(3)"/> Opcion 3
+  <input type="radio" name="opcion" (click)="escogerOpcion(4)"/> Opcion 4
+  <input type="radio" selected="selected" name="opcion" (click)="escogerOpcion(0)"/>
+</div>
+
+
